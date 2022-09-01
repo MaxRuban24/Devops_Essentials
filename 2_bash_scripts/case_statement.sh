@@ -3,25 +3,30 @@
 case $1 in
 
 start)
-    echo "Service started"
-    sleep 9999 &
-    pid=$!
-    ;;
+	sleep 9999 &
+    	pid=($!)
+    	echo $pid
+    	echo "Service started"
+;;
 
 stop)
-    echo $pid
-    killall sleep
-    echo "Service stopped"
-    ;;
+	sid=$(ps a | grep sleep | grep -v grep | cut -c 1-7)
+	echo $sid	
+	kill $sid && echo "Service stopped"
+;;
 
 restart)
-    echo $pid
-    killall sleep
-    echo "Service stopped"
-    echo "Service started"
-    sleep 9999 &
-    pid=$!
-    ;;
+    	sid=$(ps a | grep sleep | grep -v grep | cut -c 1-7)
+        echo $sid
+        kill $sid && echo "Service stopped"
+
+	sleep 2
+
+	sleep 9999 &
+        pid=($!)
+        echo $pid
+        echo "Service started"
+	;;
 
 *)
     echo "usage: $0 [start|stop|restart]"
