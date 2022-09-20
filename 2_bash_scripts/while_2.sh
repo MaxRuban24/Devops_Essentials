@@ -8,6 +8,9 @@ do
 
     if [ $command == hi ]; then
         echo "Hello `whoami`"
+
+    elif [ -z $command ]; then
+        echo "Input should not be empty"
     
     else
 

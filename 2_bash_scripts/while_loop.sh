@@ -28,6 +28,6 @@ do
         4) break
             ;;
 
-        *) "Please select [1-4]"
+        *) echo "Please select [1-4]"
     esac
 done  

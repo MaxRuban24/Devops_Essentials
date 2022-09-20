@@ -4,7 +4,12 @@
 
 # print (type(isTrue))
 
-def sum(a,b):
-    print(a + b)
+def sum(a, b):
+    return(a + b)
 
-sum (2,4)
+
+print("This function sums two integer numbers")
+a = int(input("Enter first digit: " ))
+b = int(input("Enter second digit: " ))
+
+print("Result: ", sum(a, b))

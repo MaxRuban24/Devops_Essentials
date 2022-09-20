@@ -10,7 +10,7 @@ else
     then echo $@
     elif [[ $# -gt 2 ]] && [[ $# -lt 4 ]]
     then echo ${@: -1}
-    else echo "Invalid number of arguments"
+    else echo "Invalid number of arguments: one OR three arguments required"
     fi
 fi
     

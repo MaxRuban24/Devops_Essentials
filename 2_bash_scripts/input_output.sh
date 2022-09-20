@@ -14,5 +14,5 @@ In the twilight rain
 these brilliant-hued hibiscus -
 A lovely sunset." | cat >> $filename
 
-cat $filename 1>/dev/null 2>stderr
+cat $filename 1> output 2> stderr
 
